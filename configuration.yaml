@@ -1,0 +1,22 @@
+rest:
+  - resource: https://www.vegvesen.no/ws/no/vegvesen/kjoretoy/felles/datautlevering/enkeltoppslag/kjoretoydata?kjennemerke=EV53477
+    headers:
+      SVV-Authorization: "Apikey 5792dbc9-72c5-46ae-8d07-dcba3b065c22"
+    scan_interval: 86400
+    sensor:
+      - name: "SVV-Kjennemerke"
+        value_template: "{{ value_json.kjoretoydataListe[0].kjoretoyId.kjennemerke }}"
+      - name: "SVV-VIN"
+        value_template: "{{ value_json.kjoretoydataListe[0].kjoretoyId.understellsnummer }}"
+      - name: "SVV-Dimensjoner"
+        value_template: >
+          Bredde: {{ (value_json.kjoretoydataListe[0].godkjenning.tekniskGodkjenning.tekniskeData.dimensjoner.bredde / 1000 | round(2)) }}m
+          Høyde: {{ (value_json.kjoretoydataListe[0].godkjenning.tekniskGodkjenning.tekniskeData.dimensjoner.hoyde / 1000 | round(2)) }}m
+          Lengde: {{ (value_json.kjoretoydataListe[0].godkjenning.tekniskGodkjenning.tekniskeData.dimensjoner.lengde / 1000 | round(2)) }}m
+          Vekt: {{ value_json.kjoretoydataListe[0].godkjenning.tekniskGodkjenning.tekniskeData.vekter.egenvekt }}kg
+      - name: "SVV-Merke"
+        value_template: > 
+          {{ value_json.kjoretoydataListe[0].godkjenning.tekniskGodkjenning.tekniskeData.generelt.merke[0].merke }}
+          {{ value_json.kjoretoydataListe[0].godkjenning.tekniskGodkjenning.tekniskeData.generelt.handelsbetegnelse[0] }}
+      - name: "SVV-EU-kontroll"
+        value_template: "{{ value_json.kjoretoydataListe[0].periodiskKjoretoyKontroll.kontrollfrist }}"
