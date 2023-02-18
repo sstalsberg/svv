@@ -1,5 +1,5 @@
 rest:
-  - resource: https://www.vegvesen.no/ws/no/vegvesen/kjoretoy/felles/datautlevering/enkeltoppslag/kjoretoydata?kjennemerke=ChangeMe
+  - resource: https://www.vegvesen.no/ws/no/vegvesen/kjoretoy/felles/datautlevering/enkeltoppslag/kjoretoydata?kjennemerke=CarRegistrationNumber
     headers:
       SVV-Authorization: "Apikey YourOwnAPICode"
     scan_interval: 86400
