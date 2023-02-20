@@ -12,4 +12,4 @@ SVV-Authorization: "Apikey YourOwnAPICode"
 
 <img width="511" alt="lovelace-example-card" src="https://user-images.githubusercontent.com/125091134/220125079-28f7789a-820f-4121-808f-ac7422dccbcb.png">
 
-Example lovelace card based on picture-elements.
+Example lovelace card based on picture-elements in the lovelace-example-card.yaml file.
