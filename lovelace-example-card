@@ -1,0 +1,54 @@
+elements:
+  - entity: sensor.svv_kjennemerke
+    prefix: 'Kjennemerke: '
+    style:
+      color: null
+      font-size: 12px
+      line-height: 32px
+      margin: 7px 15px
+      pointer-events: none
+      left: 0
+      text-shadow: rgb(0, 0, 0, 0.2) 0px 0px 2px
+      top: 0
+      transform: initial
+    type: state-label
+  - entity: sensor.svv_merke
+    style:
+      color: null
+      font-size: 16px
+      line-height: 32px
+      margin: '-10px 15px'
+      pointer-events: none
+      left: 0
+      text-shadow: rgb(0, 0, 0, 0.2) 0px 0px 2px
+      top: 0
+      transform: initial
+    type: state-label
+  - entity: sensor.svv_vin
+    prefix: 'VIN: '
+    style:
+      color: null
+      font-size: 12px
+      line-height: 32px
+      margin: 22px 15px
+      pointer-events: none
+      left: 0
+      text-shadow: rgb(0, 0, 0, 0.2) 0px 0px 2px
+      top: 0
+      transform: initial
+    type: state-label
+  - entity: sensor.svv_dimensjoner
+    prefix: 'Dimensjoner: '
+    style:
+      color: rgb(200,200,200,0.8)
+      font-size: 12px
+      line-height: 32px
+      margin: 237px 35px
+      pointer-events: none
+      left: 0
+      text-shadow: rgb(0, 0, 0, 0.2) 0px 0px 2px
+      top: 0
+      transform: initial
+    type: state-label
+image: /local/kona.png
+type: picture-elements
