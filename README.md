@@ -10,5 +10,6 @@ https://www.vegvesen.no/om-oss/om-organisasjonen/apne-data/et-utvalg-apne-data/a
 And put it in the code here keeping Apikey:
 SVV-Authorization: "Apikey YourOwnAPICode"
 
-Example lovelace card based on picture-elements card
 <img width="511" alt="lovelace-example-card" src="https://user-images.githubusercontent.com/125091134/220125079-28f7789a-820f-4121-808f-ac7422dccbcb.png">
+
+Example lovelace card based on picture-elements.
